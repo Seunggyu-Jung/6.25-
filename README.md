@@ -51,6 +51,33 @@ num_list = [5,4,3,2,1]
 print(num_list)
 -> [1, 2, 3, 4, 5]
 ```
+- .reverse() : 역으로 정렬, 숫자를 큰 수부터 일렬로 정리
+```
+num_list = [1, 2, 3, 4, 5]
+print(num_list)
+-> [5, 4, 3, 2, 1]
+```
+- .clear(): 리스트 안에 있는 인덱스를 전부 지움
+```
+num_list = [1, 2, 3, 4, 5]
+num_list.clear()
+print(num_list)
+-> []
+```
+- 다양한 데이터 타입과 함께 사용가능 : 숫자, 문자, 불리안 전부 포함
+```
+mix_list = ["조세호" , 20, True]
+print(mix_list)
+-> ['조세호', 20, True]
+```
+- .extend() : 리스트의 확장
+```
+num_list = [1,2,3,4,5]
+num_list.extend(mix_list)
+print(num_list)
+-> [1, 2, 3, 4, 5, '조세호', 20, True]
+```
+
 
 
 
