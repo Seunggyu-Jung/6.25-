@@ -78,6 +78,68 @@ print(num_list)
 -> [1, 2, 3, 4, 5, '조세호', 20, True]
 ```
 
+## 2. 딕셔너리(사전)
+{} : key값과 value 값을 지정하여 정리 , {key:value}를 사용
+```
+cabinet = {3: "유재석", 100: "김태호"}
+print(cabinet[3])
+print(cabinet[100])
+-> 유재석, 김태호
+```
+
+- .get() 메소드 : 딕셔너러의 키값에 해당하는 value값을 출력, 해당 키값이 없을 경우 none 출력
+```
+print(cabinet.get(3)) -> 유재석
+print(cabinet.get(5)) -> none
+print(cabinet.get(5, "사용 가능")) -> 사용 가능
+```
+- (키값 in 딕셔너리) : 블리언 타입으로 출력
+```
+print(3 in cabinet) -> True
+print(5 in cabinet) -> False
+```
+- 키 부분에 문자 또한 넣을 수 있음
+```
+cabinet = {"A-3": "유재석", "B-100" : "김태호"} 
+print(cabinet["A-3"]) 
+print(cabinet["B-100"])
+-> 유재석, 김태호
+```
+- 새로운 인덱스 추가 : 딕셔너리 안에 새로운 키값과 value 값을 넣는다.
+```
+cabinet["A-3"] = "김종국"
+cabinet["C-20"] = "조세호"
+print(cabinet)
+-> {'A-3': '김종국', 'B-100': '김태호', 'C-20': '조세호'}
+```
+- del : 딕셔너리에서 삭제할 경우
+```
+del cabinet["A-3"]
+print(cabinet)
+-> {'B-100': '김태호', 'C-20': '조세호'}
+```
+- .keys() : key 들만 출력
+```
+print(cabinet.keys())
+-> dict_keys(['B-100', 'C-20'])
+```
+- .values() : value 값들만 출력
+```
+print(cabinet.values())
+-> dict_values(['김태호', '조세호'])
+```
+- .items() : key, value를 쌍으로 출력
+```
+print(cabinet.items())
+-> dict_items([('B-100', '김태호'), ('C-20', '조세호')])
+```
+- .clear() : 일괄 삭제
+```
+cabinet.clear()
+-> {}
+```
+
+
 
 
 
