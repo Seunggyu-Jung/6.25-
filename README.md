@@ -139,6 +139,96 @@ cabinet.clear()
 -> {}
 ```
 
+## 3. 튜플 ()
+괄호로 만들어진 집합체. 항목 추가나 변경이 불가능, 하지만 프로세스 처리 속도가 리스트 보다 빠름
+
+```
+menu = ("돈까스", "치즈까스")
+print(menu[0]) -> 돈까스
+print(menu[1]) -> 치즈까스
+```
+
+```
+(name, age, hobby) = ("김종국", 20, "운동")
+print(name, age, hobby)
+```
+
+## 4. 세트 
+집합을 의미, 중복 안됨, 순서 무작위
+```
+my_set = {1, 2, 3, 3 , 3}
+print(my_set) -> {1, 2, 3}  # 중복 안됨
+```
+
+- 세트 표현 방식 
+```
+java = { "유재석", "김태호", "양세형"}
+python = set(["유재석", "박명수"])
+```
+
+- .intersection() or & : 교집합
+```
+print(java & python)
+print(java.intersection(python))
+-> {'유재석'}
+```
+
+- .union() or | : 합집합
+```
+print(java | python)
+print(java.union(python))
+-> {'양세형', '김태호', '박명수', '유재석'}
+```
+
+- .diference() or - : 차집합
+```
+print(java-python)
+print(java.difference(python))
+-> {'김태호', '양세형'}
+```
+
+- .add() : 세트에 새로운 인덱스를 더할 경우
+```
+python.add("김태호")
+print(python)
+-> {'박명수', '김태호', '유재석'}
+```
+
+- .remove() : 세트에서 원소를 빼고 싶은 경우
+```
+python.remove("김태호")
+print(python)
+-> {'박명수', '유재석'}
+```
+
+## 5. 자료구조의 변경
+자료의 형태 -> {} : 집합(set), [] : 리스트(list), () : 튜플
+자료의 형태 출력 -> , type()으로 출력
+
+- menu = {"커피", "우유", "주스"} -> 세트형태
+
+- set -> list
+```
+menu = list(menu)
+print(menu, type(menu))
+-> ['주스', '커피', '우유'] <class 'list'>
+```
+
+- list -> tuple
+```
+menu = tuple(menu)
+print(menu, type(menu))
+-> ('주스', '커피', '우유') <class 'tuple'>
+```
+
+- tuple -> set
+```
+menu = set(menu)
+print(menu, type(menu))
+-> {'주스', '커피', '우유'} <class 'set'>
+```
+
+
 
 
 
